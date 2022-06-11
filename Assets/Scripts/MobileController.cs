@@ -16,6 +16,7 @@ public class MobileController : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        //transform.Translate(0, 0, speed * Time.fixedDeltaTime);
         MoveInput();    // Player hareket kontrolü
     }
 
@@ -76,7 +77,7 @@ public class MobileController : MonoBehaviour
         {
             rb.velocity = Vector3.zero; // Eğer hareket edilmediyse Player objesi sabit kalsın
         }
-
+        
         transform.position = new Vector3(moveX, transform.position.y, moveZ);
         // Player objesinin pozisyonu moveX değerine göre x ekseninde, moveZ değerine göre z ekseninde hareket eder ve y ekseninde sabit kalır 
 
